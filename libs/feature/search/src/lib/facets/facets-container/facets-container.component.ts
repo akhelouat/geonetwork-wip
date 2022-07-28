@@ -31,7 +31,7 @@ export class FacetsContainerComponent implements OnInit {
   constructor(
     private facets: FacetsService,
     private searchFacade: SearchFacade
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.selectedPaths$ = this.searchFacade.searchFilters$.pipe(

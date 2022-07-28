@@ -53,9 +53,11 @@ export class SearchFacade {
 
   searchId: string
 
-  constructor(private store: Store<SearchState>) {}
+  constructor(private store: Store<SearchState>) { }
 
   init(searchId: string = DEFAULT_SEARCH_KEY): void {
+    console.log('initiating search facade', searchId);
+
     this.searchId = searchId
     this.store.dispatch(new AddSearch(searchId))
 

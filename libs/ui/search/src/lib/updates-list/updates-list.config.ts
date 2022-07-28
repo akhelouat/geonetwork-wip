@@ -8,7 +8,7 @@ import { RecordPreviewComponent } from '../record-preview/record-preview.compone
 const DEFAULT_ITEM_CLS = 'pb-4'
 const DEFAULT_CONTAINER_CLS = 'gap-4 p-4'
 
-export class ResultsLayoutConfigItem {
+export class LastCreatedConfigItem {
   constructor(
     public component: Type<RecordPreviewComponent>,
     public itemClass: string = DEFAULT_ITEM_CLS,
@@ -16,19 +16,19 @@ export class ResultsLayoutConfigItem {
     public containerClass: string = DEFAULT_CONTAINER_CLS
   ) { }
 }
-export type ResultsLayoutConfigModel = Record<string, ResultsLayoutConfigItem>
+export type LastCreatedConfigModel = Record<string, LastCreatedConfigItem>
 
 export const RESULTS_LAYOUT_CONFIG =
-  new InjectionToken<ResultsLayoutConfigModel>('results-layout.config')
+  new InjectionToken<LastCreatedConfigModel>('results-layout.config')
 
-export const DEFAULT_RESULTS_LAYOUT_CONFIG: ResultsLayoutConfigModel = {
-  CARD: new ResultsLayoutConfigItem(
+export const DEFAULT_RESULTS_LAYOUT_CONFIG: LastCreatedConfigModel = {
+  CARD: new LastCreatedConfigItem(
     RecordPreviewCardComponent,
     '',
     'height: 24em;',
     'grid md:grid-cols-2 lg:grid-cols-4 gap-4 p-4'
   ),
-  LIST: new ResultsLayoutConfigItem(RecordPreviewListComponent),
-  TEXT: new ResultsLayoutConfigItem(RecordPreviewTextComponent),
-  TITLE: new ResultsLayoutConfigItem(RecordPreviewTitleComponent),
+  LIST: new LastCreatedConfigItem(RecordPreviewListComponent),
+  TEXT: new LastCreatedConfigItem(RecordPreviewTextComponent),
+  TITLE: new LastCreatedConfigItem(RecordPreviewTitleComponent),
 }

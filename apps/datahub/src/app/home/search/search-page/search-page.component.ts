@@ -13,7 +13,7 @@ export class SearchPageComponent implements OnInit {
   constructor(
     private searchRouter: RouterFacade,
     private searchFacade: SearchFacade
-  ) {}
+  ) { }
 
   scrollableOptions: InfiniteScrollModel = {
     container: '#home-page',

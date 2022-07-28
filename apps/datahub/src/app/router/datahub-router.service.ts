@@ -19,7 +19,7 @@ import {
   providedIn: 'root',
 })
 export class DatahubRouterService {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   initRoutes() {
     this.router.resetConfig(this.buildRoutes())

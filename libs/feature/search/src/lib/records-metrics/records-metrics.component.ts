@@ -16,7 +16,7 @@ export class RecordsMetricsComponent implements OnInit {
   @Output() metricSelect = new EventEmitter<RecordMetric>()
   results$: Observable<RecordMetric[]>
 
-  constructor(private searchService: SearchApiService) {}
+  constructor(private searchService: SearchApiService) { }
 
   ngOnInit(): void {
     this.results$ = this.searchService

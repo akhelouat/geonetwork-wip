@@ -9,7 +9,7 @@ import { SearchFacade } from '../search.facade'
 export class SearchStateContainerDirective implements OnInit {
   @Input('gnUiSearchStateContainer') searchId: string
 
-  constructor(@Host() private facade: SearchFacade) {}
+  constructor(@Host() private facade: SearchFacade) { }
 
   ngOnInit(): void {
     this.facade.init(this.searchId)

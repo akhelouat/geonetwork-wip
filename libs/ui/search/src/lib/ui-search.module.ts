@@ -22,6 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { ResultsListItemComponent } from './results-list-item/results-list-item.component'
 import { UiWidgetsModule } from '@geonetwork-ui/ui/widgets'
+import { UpdatesListComponent } from './updates-list/updates-list.component'
+import { LastCreatedPreviewComponent } from './last-created-preview/last-created-preview.component'
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { UiWidgetsModule } from '@geonetwork-ui/ui/widgets'
     ResultsListComponent,
     ResultsHitsNumberComponent,
     ResultsListItemComponent,
+    UpdatesListComponent,
+    LastCreatedPreviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,6 +63,7 @@ import { UiWidgetsModule } from '@geonetwork-ui/ui/widgets'
     FacetsModule,
     RecordPreviewComponent,
     ResultsHitsNumberComponent,
+    UpdatesListComponent,
   ],
   providers: [
     { provide: RESULTS_LAYOUT_CONFIG, useValue: DEFAULT_RESULTS_LAYOUT_CONFIG },

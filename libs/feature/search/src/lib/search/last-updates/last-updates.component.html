@@ -1,0 +1,6 @@
+<h2 class="title ">Fil d'activité</h2>
+<div class="line">
+  <div *ngFor="let update of updates$ | async" class="h-40 w-80 bg-white m-4">
+    {{ update.title }}
+  </div>
+</div>
